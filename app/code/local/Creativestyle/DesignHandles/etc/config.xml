@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Creativestyle_DesignHandles>
+            <version>0.1.1</version>
+        </Creativestyle_DesignHandles>
+    </modules>
+    <global>
+        <models>
+            <creativestyle_designhandles>
+                <class>Creativestyle_DesignHandles_Model</class>
+                <resourceModel>creativestyle_designhandles_resource</resourceModel>
+            </creativestyle_designhandles>
+            <creativestyle_designhandles_resource>
+                <class>Creativestyle_DesignHandles_Model_Resource</class>
+            </creativestyle_designhandles_resource>
+        </models>
+        <helpers>
+            <creativestyle_designhandles>
+                <class>Creativestyle_DesignHandles_Helper</class>
+            </creativestyle_designhandles>
+        </helpers>
+        <events>
+            <controller_action_layout_load_before>
+                <observers>
+
+                    <category_layer_layout_observer>
+                        <type>singleton</type>
+                        <class>Creativestyle_DesignHandles_Model_Observer</class>
+                        <method>addCategoryLayerLayoutHandle</method>
+                    </category_layer_layout_observer>
+                </observers>
+            </controller_action_layout_load_before>
+        </events>
+    </global>
+    <adminhtml>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <designhandles>
+                                            <title>DesignHandles Settings</title>
+                                        </designhandles>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+    <default>
+        <designhandles>
+            <settings>
+                <prefix>custom_prefix_</prefix>
+            </settings>
+        </designhandles>
+    </default>
+</config>

@@ -1,0 +1,40 @@
+<config>
+    <tabs>
+        <creativestyle translate="label" module="creativestyle_s3">
+            <label>Creativestyle</label>
+            <sort_order>100</sort_order>
+        </creativestyle>
+    </tabs>
+    <sections>
+        <designhandles>
+            <label>Creativestyle Design Handles</label>
+            <tab>creativestyle</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>140</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <settings translate="label">
+                    <label>Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <prefix>
+                            <label>Layout handle prefix</label>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>required-entry</validate>
+                            <comment>Use it to avoid potential conflicts with other extensions</comment>
+                        </prefix>
+                    </fields>
+                </settings>
+            </groups>
+        </designhandles>
+    </sections>
+</config>
